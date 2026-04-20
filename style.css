@@ -1,0 +1,132 @@
+/* Adapted from jonbarron.info — same Lato @14px, same link colors. */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #222;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+h1 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0 0 14px;
+}
+
+h2 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  margin: 36px 0 14px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 6px;
+}
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #f09228;
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+/* Header layout — matches jonbarron's 63%/37% split, vertically centered */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 8px;
+}
+.header-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.header-photo {
+  flex: 0 0 220px;
+}
+.header-photo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+.links {
+  margin-top: 14px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .header-text, .header-photo {
+    flex: 1 1 auto;
+  }
+  .header-photo img {
+    max-width: 160px;
+  }
+}
+
+/* Publications */
+.hint {
+  color: #777;
+  margin-bottom: 16px;
+}
+.pub {
+  margin: 14px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f4f4f4;
+}
+.pub:last-child {
+  border-bottom: none;
+}
+.pub .title {
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #111;
+}
+.pub .title a {
+  color: inherit;
+}
+.pub .title a:hover {
+  color: #f09228;
+}
+.pub .authors {
+  margin: 0 0 2px;
+  color: #333;
+}
+.pub .venue {
+  margin: 0;
+  color: #555;
+}
+.badge {
+  color: #b35900;
+  font-style: italic;
+  font-weight: 700;
+}
+
+footer {
+  margin-top: 48px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+}
